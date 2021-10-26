@@ -2,6 +2,14 @@
 /* Custom properties   */
 /* ------------------- */
 
+/*
+font-family: 'Bree Serif', serif;
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;*/
+
 :root {
     /* colors *//*can change this*/
     --clr-dark: 230 35% 7%;
