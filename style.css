@@ -8,36 +8,69 @@ font-family: 'Merriweather', serif;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
-font-family: 'PT Serif', serif;*/
+font-family: 'PT Serif', serif;
+--ff-sans-cond: "Barlow Condensed", sans-serif;
+--ff-sans-normal: "Barlow", sans-serif;
+*/
 
 :root {
     /* colors *//*can change this*/
-    --clr-dark: 230 35% 7%;
-    --clr-light: 231 77% 90%;
-    --clr-white: 0 0% 100%;
+    --clr-dark-100: #000000;
+    --clr-dark-200: #333333;/*Titles?*/
+    --clr-dark-300: #404040;/*body txt*/
+    --clr-dark-400: #444444;
+    --clr-dark-500: #797777;/* or body txt*/
+    --cld-dark-600: #5a5858c4;
+
+    --clr-light-100: #ffffff;
+    
+    --clr-accent-100: #61c9a8;
+    --clr-accent-200: #66baa8;
+    --clr-accent-300: #00c9bf;
+    --clr-accent-400: #d65db1;
+    --clr-accent-500: #bc4F7e;
+    --clr-accent-600: #db5461;
+    
     
     /* font-sizes *//*Working from base 16px CAN CHANGE THESE VALUES*/
-    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);/*normally the H1 is difficult so best to do it*
-    --fs-800: 3.5rem;/*like this over all screen sizes*/
-    --fs-700: 1.5rem;
-    --fs-600: 1rem;
-    --fs-500: 1rem;
-    --fs-400: 0.9375rem;/*base size as the body text*/
-    --fs-300: 1rem;
+    --fs-900: clamp(1.438rem, 4vw + 1rem, 3.75rem);/*normally the H1 is difficult so best to do it*/
+    /*--fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);normally the H1 is difficult so best to do it*/
+    --fs-850: clamp(0.55rem, 1vw + 1rem, 2rem);
+
+    --fs-800: 3.5rem;
+    
+
+    --fs-700: 1.860rem;/*and this*/
+    --fs-600: 1.55rem;
+    --fs-500: 1rem;/*and this*/
+    --fs-400: 0.9375rem;/*ONLU DONE THIS ONE SO FARbase size as the body text*/
+    
+    
+
     --fs-200: 0.875rem;
     
     /* font-families *//*can change this*/
-    --ff-serif: "Bellefair", serif;
-    --ff-sans-cond: "Barlow Condensed", sans-serif;
-    --ff-sans-normal: "Barlow", sans-serif;
+    --ff-serif-mont: "Montserrat", sans-serif;
+    
+
+    /*font-weights*/
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+
+    /*border-radius*/
+    --br-100: 1rem;
 }
 
 @media (min-width: 35em) {/*Only redifine  font-sizes that need changing in  diff screen sizes*/ 
     :root { /*If work in Figma can check what they change to*/
         --fs-800: 5rem;
-        --fs-700: 2.5rem;
-        --fs-600: 1.5rem;
-        --fs-500: 1.25rem;
+        
+        
+        
+        --fs-700: 2rem;
         --fs-400: 1rem;
     }
 }
@@ -46,11 +79,15 @@ font-family: 'PT Serif', serif;*/
     :root {
         /* font-sizes */
         --fs-800: 6.25rem;
-        --fs-700: 3.5rem;
+       
 
-        --fs-600: 2rem;
-        --fs-500: 1.75rem;
+       
+       
+
+
         --fs-400: 1.125rem;
+        --fs-500: 1.313rem;
+        --fs-600: 1.8rem;
     }
 }
 
@@ -60,7 +97,7 @@ font-family: 'PT Serif', serif;*/
 /* Reset               */
 /* ------------------- */
 
-/* https://piccalil.li/blog/a-modern-css-reset/ */
+
 
 /* Box sizing */
 *,
@@ -68,6 +105,23 @@ font-family: 'PT Serif', serif;*/
 *::after {
     box-sizing: border-box;
 }
+
+html {
+    font-size: 1rem;
+}
+
+/*Reset line-height*/
+h1,
+.h1,
+h2,
+.h2, 
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1;
+}
+
 
 /* Reset margins */
 body,
@@ -89,16 +143,27 @@ h4,
 h5,
 h6,
 p {
-    font-weight: 400;
+    font-weight: var(--fw-400);
 }
+a {
+    text-decoration: none;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+  text-decoration: none;
+}
+
 
 /* set up the body */
 body {
-    font-family: ;
+    font-family: var(--ff-serif-mont);
     font-size: var(--fs-400);
-    color: ;
+    color: var(--clr-dark-300);
     background-color: ;
-    line-height: 1.5;
+    line-height: 1.6;
     min-height: 100vh;
     display: grid;/* THIS WILL HELP our .grid-container*/ 
     grid-template-rows: min-content 1fr;/*stretch out*/
@@ -106,9 +171,10 @@ body {
 
 /* make images easier to work with */
 img,
-picture {
+svg {
     max-width: 100%;
     display: block;
+    /*height: auto;*/
 }
 
 /* make form elements easier to work with */
@@ -162,55 +228,105 @@ select {
     margin-inline: auto;
     max-width: 80rem;/*to some kind of Grid container below*/
 }
+
+.btn {
+    /*or display: inline-grid; /*so it doesn't expand if only grid*/
+  color: var(--clr-light-100);
+  display: inline-block;
+  font-size: ;
+  border: 0;
+  font-weight: var(--fw-700);
+  line-height: 1.125;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .5em 1em;
+  background-color: #61c9a8;/*for now*/
+}
+
+.btn-green {
+
+}
+
+.btn-rose {
+    
+}
+
 /*****/
 
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* Screen readers only */
-  border: 0;
-}
 
 /* colors *//*can change this*/
 
 .bg-dark { 
-    background-color: hsl( var(--clr-dark) );
+    background-color: ;
 }
 .bg-accent { 
-    background-color: hsl( var(--clr-light) );
+    background-color: ;
 }
 .bg-white { 
-    background-color: hsl( var(--clr-white) );
+    background-color: ;
 }
 
 .text-dark { 
-    color: hsl( var(--clr-dark) );
+    color: ;
 }
 .text-accent { 
-    color: hsl( var(--clr-light) );
+    color: ;
 }
 .text-white { 
-    color: hsl( var(--clr-white) );
+    color: ;
 }
 
 /* typography */
 
-.ff-serif { 
-    font-family: var(--ff-serif); 
-} 
+.heading {
+    color: var(--clr-dark-100);
+    font-size: var(--fs-900);
+    font-weight: var(--fw-800);
+}
 
-.ff-sans-cond { 
-    font-family: var(--ff-sans-cond); 
-} 
+.main-sub-heading {
+    color: var(--clr-dark-300);
+    font-size: var(--fs-850);
+    font-weight: var(--fw-500);
+}
 
-.ff-sans-normal { 
-    font-family: var(--ff-sans-normal); 
+.sub-heading {
+    color: var(--clr-dark-100);
+    font-size: var(--fs-700);
+    font-weight: var(--fw-500);
+
+}
+
+.sub-heading-skills {
+    color: var(--clr-dark-200);
+    font-size: var(--fs-500);
+    font-style: italic;
+    font-weight: var(--fw-400);
+}
+
+.section-title {
+    color: var(--clr-accent-500);
+    text-transform: uppercase;
+    font-size: var(--fs-500);
+    font-weight: var(--fw-500);
+
+}
+
+.text-heading {
+    color: var(--clr-dark-400);
+    font-size: var(--fs-600);
+    font-weight: var(--fw-500);
+}
+
+.project-title {
+    color: var(--clr-dark-100);
+    font-size: var(--fs-500);
+    font-weight: var(--fw-600);
+}
+
+.ff-serif-mont { 
+    font-family: var(--ff-serif-mont); 
 } 
 
 .letter-spacing-1 { 
@@ -231,31 +347,15 @@ select {
 .fs-900 { 
     font-size: var(--fs-900); 
 }
-.fs-800 
-{ font-size: var(--fs-800); 
-}
-.fs-700 { 
-    font-size: var(--fs-700); 
-}
-
-.fs-600 { 
-    font-size: var(--fs-600); 
-}
-
-.fs-500 {
-    font-size: var(--fs-500); 
+.fs-850 { 
+    font-size: var(--fs-850); 
 }
 
 .fs-400 { 
     font-size: var(--fs-400); 
 }
 
-.fs-300 { 
-    font-size: var(--fs-300); 
-}
-.fs-200 { 
-    font-size: var(--fs-200); 
-}
+
 
 .fs-900,
 .fs-800,
@@ -267,6 +367,7 @@ select {
 /* ------------------- */
 /* Compontents         */
 /* ------------------- */
+
 
 .large-button {/*can change this -can do display: inline-block but grid works here*/
     display: inline-grid; /*so it doesn't expand if only grid*/
