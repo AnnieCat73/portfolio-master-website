@@ -24,7 +24,7 @@
     <div class="my-details">
       <p class="name">Annie Indreiten</p>
       <div class="contact-me">
-        <a href="mailto:hello@jane.dev" class="footer-link">hello@jane.dev</a>
+        <a href="mailto:hello@jane.dev" class="email-link">hello@jane.dev</a>
         <ul class="social-list">
           <li class="social-list-item">
             <a class="social-list-link" href="#">
@@ -212,36 +212,37 @@
         <div class="form-heading">
           <h2 class="section-title">Contact</h2>
           <h3 class="sub-heading">Get in touch</h3>
-          <p>Drop me a line if you would like us to work on something exciting together, got a question or a proposal,
-            or
-            you
-            just want to say hello?
-          </p>
-          <p>Looking forward to hearing from you!</p>
-        </div>
+          <div class="form-container">
+            <p>Drop me a line if you would like us to work on something exciting together, got a question or a proposal,
+              or you just want to say hello?
+            </p>
+            <p>Looking forward to hearing from you!</p>
 
-        <form action="https://formsubmit.co/anniecats673@gmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="New email wooo!">
-          <div>
-            <label for="name" class="">Your Name</label>
-            <input type="text" name="name" placeholder="Your Name" required>
+
+            <form action="https://formsubmit.co/anniecats673@gmail.com" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="New email wooo!">
+              <div class="name-input">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+              </div>
+              <div class="email-input">
+                <label for="email">Your Email</label>
+                <input type="email" name="email" placeholder="Enter Email Address" required>
+              </div>
+              <input type="hidden" name="_next" value="https://yourdomain.co/thankyou.html">
+              <!--put in your domain name i.e annieIndreiten.com and your file of choice SEE SEND EMAILS FROM A HTML CONTACT FORM -code with Ania Kubow-->
+              <div class="msg-input">
+                <label for="message">Your Message</label>
+                <textarea type="text" name="message" placeholder="Enter Your Message" required></textarea>
+              </div>
+              <div class="send-btn">
+                <button type="submit">Send</button>
+              </div>
+            </form>
           </div>
-          <div>
-            <label for="email" class="">Your Email</label>
-            <input type="email" name="email" placeholder="Email Address" required>
-          </div>
-          <input type="hidden" name="_next" value="https://yourdomain.co/thankyou.html">
-          <!--put in your domain name i.e annieIndreiten.com and your file of choice SEE SEND EMAILS FROM A HTML CONTACT FORM -code with Ania Kubow-->
-          <div>
-            <label for="message" class="">Your Message</label>
-            <input type="text" name="message" placeholder="Your Message" required>
-          </div>
-          <div class="send-btn">
-            <button type="submit">Send</button>
-          </div>
-        </form>
-      </div>
+
+        </div>
 
     </section>
 
@@ -250,7 +251,7 @@
   <footer class="primary-footer">
 
     <div class="footer-content">
-      <p>2022 | Designed & coded by Annie Indreiten</p>
+      <p class="footer-text">2022 | Designed & <span>coded</span> by Annie Indreiten</p>
       <ul class="social-list">
         <li class="social-list-item">
           <a class="social-list-link" href="#">
