@@ -668,7 +668,7 @@ textarea::placeholder {
 @media (min-width: 35em) {
     .contact form {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr min-content;
         gap: 1em 2em;
         padding-bottom: 2em;
     }
@@ -714,3 +714,22 @@ textarea::placeholder {
 /* ------------------- */
 
 /* home */
+
+
+/*dev-camp-learning*/
+/*github-repo-gallery*/
+
+.projects-title {
+    color: var(--clr-dark-100);
+    font-size: var(--fs-600);
+    font-weight: var(--fw-600);
+}
+
+.project-sub-heading {
+    color: var(--clr-accent-500);
+    font-weight: var(--fw-400);
+}
+
+@media (min-width: 35em) {
+    
+}
