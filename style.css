@@ -42,9 +42,10 @@ font-family: 'PT Serif', serif;
 
     --fs-700: 1.860rem;/*and this*/
     --fs-600: 1.5rem;
+   
     --fs-500: 1rem;/*and this*/
     --fs-400: 0.9375rem;/*ONLU DONE THIS ONE SO FARbase size as the body text*/
-    
+   
     
 
     --fs-200: 0.875rem;
@@ -149,11 +150,15 @@ a {
     text-decoration: none;
 }
 
-ul[class],
-ol[class] {
+ul[class] {
   list-style: none;
   padding: 0;
   text-decoration: none;
+}
+
+ol[class] {
+    padding: 0;
+    text-decoration: none; 
 }
 
 
@@ -164,7 +169,7 @@ body {
     color: var(--clr-dark-300);
    
     background-color: ;
-    line-height: 1.6;
+    line-height: 1.5;
     min-height: 100vh;
     display: grid;/* THIS WILL HELP our .grid-container*/ 
     grid-template-rows: min-content 1fr;/*stretch out*/
@@ -594,18 +599,49 @@ select {
     .nav-item {
         color: var(--clr-light-100);
         font-weight: var(--fw-500);
+        transition: font-weight ease-in-out 3s;
+    }
+
+    .nav-item:hover,
+    .nav-item:focus {
+        font-weight: var(--fw-700);
     }
 
     .nav-link {
         color: var(--clr-light-100);
     }
 
-    .nav-item:hover,
-    .nav-link:focus {
-        font-weight: var(--fw-700);
-        font-size: var(--fs-500);
-    }
 }
+
+/*Hero*/
+
+.img-hero {
+    border-radius: 20%;
+}
+
+/*.hero-img {
+    background-image: url(./images/Me-dummy-trans.png);
+    background-repeat: no-repeat;
+    height: 100rem;
+    padding: ;
+    background-size: cover;
+    background
+    
+}
+
+.img-hero {
+    
+}*/
+
+/*About*/
+
+/*Skills*/
+
+.course-list .list-item{
+    color: inherit;
+}
+
+
 
 /*Contact*/
 
@@ -719,9 +755,12 @@ textarea::placeholder {
 /*dev-camp-learning*/
 /*github-repo-gallery*/
 
+
+
+
 .projects-title {
     color: var(--clr-dark-100);
-    font-size: var(--fs-600);
+    font-size: var(--fs-900);
     font-weight: var(--fw-600);
 }
 
@@ -730,6 +769,16 @@ textarea::placeholder {
     font-weight: var(--fw-400);
 }
 
+.sub-heading-2 {
+    font-style: italic;
+}
+
 @media (min-width: 35em) {
     
+}
+
+/*dev-camp-learning*/
+
+blockquote {
+    font-style: italic;
 }
