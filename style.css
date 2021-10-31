@@ -169,7 +169,7 @@ body {
     color: var(--clr-dark-300);
    
     background-color: ;
-    line-height: 1.5;
+    line-height: 1.6;
     min-height: 100vh;
     /*display: grid;/* THIS WILL HELP our .grid-container*/ 
     /*grid-template-rows: min-content 1fr;/*stretch out*/
@@ -230,17 +230,19 @@ select {
     
 }
 
-.flow > *:where(:not(:first-child)) {/* or last child- see notes if use it*/
-    margin-top: var(--flow-space, 1rem);
-    outline: 1px solid red;
+.space-large > * {
+    margin-top: 2rem;
 }
 
-/*Probably not use this one*/
-.container {/*can change this*/
-    padding-inline: 2em;
-    margin-inline: auto;
-    max-width: 80rem;/*to some kind of Grid container below*/
+.space-small > * {
+    margin-top: .5rem;
 }
+
+/*.flow > *:where(:not(:first-child)) {/* or last child- see notes if use it
+    margin-top: var(--flow-space, 1rem);
+    
+}*/
+
 
 .btn {
     /*or display: inline-grid; /*so it doesn't expand if only grid*/
@@ -428,6 +430,18 @@ select {
     grid-column: 2;
 }
 
+section {
+    padding-bottom: 3rem;
+    
+  }
+  
+@media (min-width: 35em) {
+    section {
+      padding-bottom: 5rem;
+    }
+}
+
+
 /********************/
 /*Can do a grid inside here of the content--see.grid-container--detination 3 on destination page f.ex*/
 .grid-container--hompage/*f.ex*/ {
@@ -457,7 +471,7 @@ select {
 }CAN HAVE THIS AND READJUSt THE PROPERTIES INDIVIDUALLY*/
 
 
-/*********************************************/
+
 
 @media (min-width: 35em) {
     .main-grid {
@@ -469,7 +483,7 @@ select {
     
 }
 
-
+/*********************************************/
 
 /* -------
 ------------ */
@@ -637,6 +651,17 @@ select {
 
 /*Hero*/
 
+.hero {
+    text-align: center;
+}
+
+.hero .home-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
 .img-hero {
     border-radius: 20%;
 }
@@ -654,6 +679,13 @@ select {
 .img-hero {
     
 }*/
+
+@media (min-width: 27em) {
+    .hero .home-btns {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
 
 /*About*/
 
@@ -744,6 +776,10 @@ textarea::placeholder {
 
 
 /*Footer*/
+
+.primary-footer {
+    padding-bottom: 2rem;
+}
 
 .footer-content {
     display: grid;
