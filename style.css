@@ -171,13 +171,18 @@ body {
     background-color: ;
     line-height: 1.5;
     min-height: 100vh;
-    display: grid;/* THIS WILL HELP our .grid-container*/ 
-    grid-template-rows: min-content 1fr;/*stretch out*/
+    /*display: grid;/* THIS WILL HELP our .grid-container*/ 
+    /*grid-template-rows: min-content 1fr;/*stretch out*/
 }
 
 @media (min-width: 45em) {
     body {
         padding-top: 7em; /*This is for HEADER fixed prevent content*/
+    }
+}
+@media (min-width: 60em) {
+    body {
+        padding-top: 8em; /*This is for HEADER fixed prevent content*/
     }
 }
 
@@ -219,10 +224,6 @@ select {
     gap: var(--gap, 1rem);
 }
 
-.grid {
-    display: grid;
-    gap: var(--gap, 1rem);
-}
 
 .flow > *:not(:first-child) {/* or last child- see notes if use it*/
     margin-top: 1rem;
@@ -412,11 +413,19 @@ select {
 /* Layout                        */
 /* ----------------------------- */
 
-.grid-container {/* FOR MOBILE GRID MAIN CONTAINER*/
-    border: 5px solid limegreen;/*just to see it*/
+.main-grid {/* FOR MOBILE GRID MAIN CONTAINER*/
+    
     display: grid;
-    place-items: center; /*centers everything on the page. Cld use place-content: center; but wld need row-gap: 10% f.ex  then*/
-    padding-inline: 1rem; /*if still need spacing to right and left*/
+    grid-template-columns: minmax(1.5rem, 1fr) minmax(0px, 35rem) minmax(1.5rem, 1fr);
+    
+    /*padding-inline: 1rem;
+    /*place-items: center; /*centers everything on the page. Cld use place-content: center; but wld need row-gap: 10% f.ex  then*/
+    /*grid-template-columns: minmax(2rem, 1fr) minmax(0, 35em) minmax (2rem, 1fr);*/
+    /*padding-inline: 1rem; /*if still need spacing to right and left*/
+}
+
+.main-grid > * {
+    grid-column: 2;
 }
 
 /********************/
@@ -450,23 +459,17 @@ select {
 
 /*********************************************/
 
-@media (min-width: 45rem) {/* FOR TABLETS AROUND 675px MAIN GRID CONTAINER*/
-    .grid-container {/*SO INSTEAD OF USING CONTAINER ABOVE WE CAN SET IT UP LIKE GRID*/
-        display: grid; /*HERE 2EM IS PADDING ON EITHER SIDE AND 2 COLUMNS INSIDE*/
-        column-gap: var(--container-gap, 2rem);/*Gap btwn the 2 columns*/
-        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
-    } /*grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr); if need padding above*/
+@media (min-width: 35em) {
+    .main-grid {
+        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0px, 40rem)) minmax(2rem, 1fr);
+        /*column-gap: var(--container-gap, 2rem);/*Gap btwn the 2 columns*/
+        /*grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);*/
+    } 
 
-    .grid-container > *:first-child {
-        grid-column: 2;
-    }
-
-    .grid-container > *:last-child {
-        grid-column: 3;
-    }
+    
 }
 
-/*SEE NOTE ON HOW TO SET IT ALL UP*/
+
 
 /* -------
 ------------ */
@@ -477,7 +480,12 @@ select {
 .primary-header {
     display: flex;/*FLEX with spacbtw*/
     justify-content: space-between;
+    height: 100px;
+    padding-top: 1em;
+    padding-inline: 1.5rem;
 }
+
+
 
 .open-nav {
     border: 0;
@@ -487,6 +495,7 @@ select {
     cursor: pointer;
     padding: 0;
     margin-bottom: auto;
+    /*margin: clamp(1.5rem, 5vw, 2rem);*/
     font-size: 2em;
     align-self: flex-start;
     transition: all ease-in-out 2s;
@@ -510,6 +519,7 @@ select {
 .my-details {
     display: flex;
     flex-direction: column;
+    /*margin: clamp(1.5rem, 5vw, 2rem);*/
 }
 
 .contact-me {
@@ -535,7 +545,6 @@ select {
 
 
 
-
 @media (min-width: 45em) {
 
     .primary-header {
@@ -547,11 +556,13 @@ select {
         color: var(--clr-light-100);
         display: flex;/* FLEX w spacebtw*/
         justify-content: space-between;
+        padding-inline: clamp(2rem, 4vw, 20rem);
     }
 
     .my-details {
         display: flex;
         flex-direction: column;
+       
     }
 
     .name {
@@ -587,6 +598,7 @@ select {
 
     .menu-nav {
         display: block;
+        
     }
 
     .menu-list {
@@ -612,6 +624,16 @@ select {
     }
 
 }
+
+@media (min-width: 60em) {
+
+    .menu-nav {
+        align-self: center;
+    }
+
+}
+
+
 
 /*Hero*/
 
