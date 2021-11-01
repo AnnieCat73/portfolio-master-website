@@ -459,7 +459,7 @@ section {
 
 
 
-@media (min-width: 35em) {
+@media (min-width: 45em) {
     .main-grid {
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0px, 40rem)) minmax(2rem, 1fr);
         /*column-gap: var(--container-gap, 2rem);/*Gap btwn the 2 columns*/
@@ -639,11 +639,24 @@ section {
 
 .hero {
     text-align: center;
+    grid-template-areas: 
+        ". hero-info ."
+        ". hero-img .";
+}
+
+.hero-info {
+    grid-area: hero-info;
+}
+
+.hero-img {
+    grid-area: hero-img;
 }
 
 .hero .home-btns {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    justify-items: center;
+    /*display: flex;
+    flex-direction: column;*/
     gap: 1.5em;
     margin-top: 2em;
 }
@@ -668,11 +681,31 @@ section {
 
 @media (min-width: 27em) {
     .hero .home-btns {
-        flex-direction: row;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-info {
+        align-self: center;
+    }
+}    
+    
+
+@media (min-width: 45em) {
+
+    .hero {
+        grid-template-areas: 
+            ". hero-info hero-img .";
+    }
+
+   
+
+    .hero .home-btns {
+        
+        grid-template-columns: 1fr;
+        flex-direction: column;
         justify-content: center;
     }
 }
-
 /*About*/
 
 .cat-img {
