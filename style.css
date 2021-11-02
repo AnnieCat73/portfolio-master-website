@@ -424,7 +424,7 @@ section {
   
 @media (min-width: 35em) {
     section {
-      padding-bottom: 5rem;
+      padding-bottom: 2rem;
     }
 
     
@@ -886,6 +886,35 @@ figcaption {
 
 /*Projects*/
 
+.projects {
+    grid-template-areas: 
+        ". project-title ."
+        ". project-1 ."
+        ". project-2 ."
+        ". project-3 ."
+        ". project-4 .";
+    /*row-gap: 1em;*/
+}
+
+.projects:first-child {
+    grid-area: project-title;
+}
+
+.projects:nth-child(2) {
+    grid-area: project-1;
+}
+
+.projects:nth-child(3) {
+    grid-area: project-2;
+}
+
+.projects:nth-child(4) {
+    grid-area: project-3;
+}
+
+.projects:nth-child(5) {
+    grid-area: project-4;
+}
 
 
 .project-details {
@@ -897,6 +926,41 @@ figcaption {
 .project-details p {
     text-align: center;
 }
+
+@media (min-width: 45em) {
+
+    .projects {
+        grid-template-areas: 
+            ". project-title project-title ."
+            ". project1 project-1 ."
+            ". project-2 project-2 ."
+            ". project-3 project-3 ."
+            ". project-4 project-4 .";
+        row-gap: 2em;
+    }
+
+    .project {
+        grid-column: 2 /4;
+        display: grid;
+        grid-template-columns: 45% 50%;
+        
+        align-items: center;
+    }
+
+    .project-details p {
+        max-width: 60%;
+    }
+
+    .project-img {
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 45em) and (max-width: 50em) {
+
+   
+}
+    
 
 
 
