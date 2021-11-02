@@ -415,6 +415,7 @@ section {
     
 }
 
+
 .section:nth-of-type(5) {
     padding-bottom: 3rem;
 }
@@ -425,31 +426,17 @@ section {
     section {
       padding-bottom: 5rem;
     }
+
+    
+    section:nth-of-type(2) {
+        padding-bottom: 1rem;
+    }
+    
 }
 
 
 /********************/
-/*Can do a grid inside here of the content--see.grid-container--detination 3 on destination page f.ex*/
-.grid-container--hompage/*f.ex*/ {
-    grid-template-areas: 
-        'title'
-        'image'
-        'tabs'
-        'content';
-} /*so f.ex*/
 
-.grid-container--destination > img {
-    grid-area: image;
-    max-width: 60%;
-}
-
-.grid-container--destination > .tab-list {
-    grid-area: tabs;
-}
-
-.grid-container--destination > .destination-info {
-    grid-area: tabs;
-}
 
 /*.flex {
     display: flex;
@@ -792,9 +779,6 @@ section {
 
 
 
-
-
-
 @media (min-width: 45em) {
 
     .about {
@@ -805,11 +789,35 @@ section {
             ". about-text about-text ."
             ". about-text about-text .";
     }
-
-    
 }
 
 /*Skills*/
+
+.skills {
+    grid-template-areas: 
+        ". side-img ."
+        ".  skills-info ."
+        ". coursework ."
+        ". currently .";
+}
+
+.skills-info {
+    grid-area: skills-info;
+}
+
+.side-img {
+    grid-area: side-img;
+}
+
+.coursework {
+    grid-area: coursework;
+}
+
+.currently {
+    grid-area: currently;
+}
+
+
 
 .section-title-skills {
     color: var(--clr-accent-500);
@@ -828,6 +836,54 @@ section {
     color: inherit;
 }
 
+.cat-img {
+    border-radius: 50%;
+}
+
+figcaption {
+    font-size: var(--fs-200);
+    font-style: italic;
+    color: var(--clr-dark-200);
+    font-weight: var(--fw-600);
+}
+
+@media (min-width: 45em) and (max-width: 50em) {
+
+    .section-title-skills {
+        font-size: var(--fs-400);
+    }
+    .sub-heading-skills {
+        font-size: var(--fs-200);
+    }
+}
+
+@media (min-width: 45em) {
+
+    .skills {
+        grid-template-areas: 
+            ". skills-info side-img ."
+            ". coursework currently .";
+        row-gap: 3em;
+    }
+
+    .currently {
+        justify-self: center;
+    }
+
+    .cat-img {
+        border-radius: 10px;
+        align-self: end;
+    } 
+
+    .side-img {
+        display: grid;
+    }
+
+    .side-img figcaption {
+        align-self: start;
+    }
+}
+
 /*Projects*/
 
 
@@ -842,9 +898,7 @@ section {
     text-align: center;
 }
 
-.cat-img {
-    border-radius: 50%;
-}
+
 
 
 
