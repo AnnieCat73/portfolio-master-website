@@ -968,7 +968,22 @@ figcaption {
 
 /*Contact*/
 
+.contact {
+    grid-template-areas: 
+        ". form-heading ."
+        ". form-container .";
+}
+
+.form-heading {
+    grid-area: form-heading;
+}
+
+.form-container {
+    grid-area: form-container;
+}
+
 .contact .form-container {
+    
     display: grid;
     grid-template-columns: 1fr;
     gap: 1em;
@@ -1047,14 +1062,33 @@ textarea::placeholder {
     }
 }
 
+/*Grid layout for contact section large screens*/
 
+@media (min-width: 45em) {
+
+    .contact {
+        grid-template-areas: 
+            ". form-heading form-heading."
+            ". form-container form-container.";
+    }
+}
+
+/*******/
 /*Footer*/
+
+.primary-footer {
+    grid-template-areas: 
+        ". footer .";
+}
+
+
 
 .primary-footer {
     padding-bottom: 2rem;
 }
 
 .footer-content {
+    grid-area: footer;
     display: grid;
     place-items: center;
 }
@@ -1069,6 +1103,14 @@ textarea::placeholder {
     color: var(--clr-accent-600);
     font-weight: var(--fw-700);
     font-style: normal;
+}
+
+@media (min-width: 45em) {
+
+    .primary-footer {
+        grid-template-areas: 
+         ". footer footer .";
+    }
 }
 
 
