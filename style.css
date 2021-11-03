@@ -1139,7 +1139,7 @@ textarea::placeholder {
 /* Page specific       */
 /* ------------------- */
 
-/* home */
+
 
 
 /*dev-camp-learning*/
@@ -1163,12 +1163,89 @@ textarea::placeholder {
     font-style: italic;
 }
 
-@media (min-width: 35em) {
+/*layout for both pages*/
+
+.project-name {
+    grid-template-areas: 
+        ". project-heading ."
+        ". main-screenshot .";
+}
+
+.heading-project-info {
+    grid-area: project-heading;
+}
+
+.main-screenshot {
+    grid-area: main-screenshot;
+}
+
+.process {
+    grid-template-areas: 
+        ". task ."
+        ". my-process .";
+}
+
+.task {
+    grid-area: task;
+}
+.my-process {
+    grid-area: my-process;
+}
+
+.outcome {
+    grid-template-areas: 
+        ". project-sub ."
+        ". outcome-screenshot ."
+        ". my-learning ."
+        ". invite .";
+}
+
+.project-sub-heading {
+    grid-area: project-sub;
+}
+
+.outcome-screenshot {
+    grid-area: outcome-screenshot;
+}
+
+.my-learning {
+    grid-area: my-learning;
+}
+
+.invite {
+    grid-area: invite;
+}
+
+
+@media (min-width: 45em) {
+
+    .project-name {
+        grid-template-areas: 
+            ". project-heading project-heading ."
+            ". main-screenshot main-screenshot.";
+    }
+
+    .process {
+        grid-template-areas: 
+            ". task task ."
+            ". my-process my-process .";
+    }
+
+    .outcome {
+        grid-template-areas:
+            ". project-sub project-sub ."
+            ". outcome-screenshot outcome-screenshot ."
+            ". my-learning my-learning ."
+            ". invite invite .";
+    }
     
 }
 
-/*dev-camp-learning*/
+
+/*dev-camp-learning only*/
 
 blockquote {
     font-style: italic;
 }
+
+/*Github-Repo-Gallery only*/
