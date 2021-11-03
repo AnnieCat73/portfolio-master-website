@@ -239,6 +239,10 @@ select {
     margin-top: 2.8rem;
 }
 
+.space-xls > *:not(:first-child) {
+    margin-top: 2.8rem;
+}
+
 
 
 .space-small > * {
@@ -1140,12 +1144,8 @@ textarea::placeholder {
 /* ------------------- */
 
 
-
-
 /*dev-camp-learning*/
 /*github-repo-gallery*/
-
-
 
 
 .projects-title {
@@ -1157,10 +1157,16 @@ textarea::placeholder {
 .project-sub-heading {
     color: var(--clr-accent-500);
     font-weight: var(--fw-400);
+    
 }
 
 .sub-heading-2 {
     font-style: italic;
+}
+
+.padding {
+    padding-top: 1.5em;
+    padding-bottom: 1em;
 }
 
 /*layout for both pages*/
@@ -1169,6 +1175,7 @@ textarea::placeholder {
     grid-template-areas: 
         ". project-heading ."
         ". main-screenshot .";
+    row-gap: 1em;
 }
 
 .heading-project-info {
@@ -1183,11 +1190,13 @@ textarea::placeholder {
     grid-template-areas: 
         ". task ."
         ". my-process .";
+    
 }
 
 .task {
     grid-area: task;
 }
+
 .my-process {
     grid-area: my-process;
 }
@@ -1198,6 +1207,7 @@ textarea::placeholder {
         ". outcome-screenshot ."
         ". my-learning ."
         ". invite .";
+    margin-bottom: 3rem;
 }
 
 .project-sub-heading {
