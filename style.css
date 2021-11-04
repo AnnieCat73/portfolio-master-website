@@ -63,6 +63,14 @@ font-family: 'PT Serif', serif;
 
     /*border-radius*/
     --br-100: 1rem;
+
+    /****/
+    --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+    --box-shadow-200: 0 2.4rem 4.8rem rgba(5, 2, 2, 0.15);
+    --box-shadow-300: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --box-shadow-400: 0 0 0 0.15rem #3dc37a;
+    --box-shadow-500: 10px 10px 5px #ccc;
+    /*****/
 }
 
 @media (min-width: 35em) {/*Only redifine  font-sizes that need changing in  diff screen sizes*/ 
@@ -696,6 +704,7 @@ section:nth-of-type(5) {
 /*Hero*/
 
 .hero {
+    
     text-align: center;
     grid-template-areas: 
         ". hero-info ."
@@ -720,7 +729,9 @@ section:nth-of-type(5) {
 }
 
 .img-hero {
-    border-radius: 20%;
+    
+   
+   
 }
 
 /*.hero-img {
