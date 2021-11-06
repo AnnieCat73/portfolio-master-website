@@ -703,20 +703,9 @@ section:nth-of-type(5) {
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-    position: relative;
-    z-index: -10;
+    
 }
 
-.hero-card::after {
-    position: absolute;
-    content: "01";
-    top: 10px;
-    left: 15px;
-    font-size: var(--fs-600);
-    font-weight: var(--fw-600);
-    color: var(--clr-dark-200);
-    z-index: 1;
-}
 
 .main-hero-card {
    justify-self: end;
@@ -731,6 +720,19 @@ section:nth-of-type(5) {
     padding: 3em 0;
     border-radius: 10px 10px 0 0;
     box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: -10;
+}
+
+.main-hero-card::after {
+    position: absolute;
+    content: "01";
+    top: 10px;
+    left: 15px;
+    font-size: var(--fs-600);
+    font-weight: var(--fw-600);
+    color: var(--clr-dark-200);
+    z-index: 1;
 }
 
 .full-name {
@@ -769,11 +771,23 @@ section:nth-of-type(5) {
     display: flex;
     gap: 1em;
     align-items: center;
+   
 }
 
-.hero .social-list-link {
+.social-link-card {
     color: var(--clr-dark-200);
     font-size: var(--fs-500);
+    
+    z-index: -1;
+}
+
+
+
+.social-link-card:hover,
+.social-link-card:focus {
+    opacity: .5;
+    cursor: pointer;
+    
 }
 
 .hero-content {
