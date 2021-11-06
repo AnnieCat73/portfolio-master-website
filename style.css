@@ -790,7 +790,7 @@ section:nth-of-type(5) {
     margin-bottom: 1em;
 }
 
-@media (min-width: 15em) and (max-width: 30em) {
+@media (min-width: 15em) and (max-width: 27em) {
     
     .hero-card {
         width: 100%;
@@ -822,7 +822,7 @@ section:nth-of-type(5) {
 
 }
 
-@media (min-width: 45em) and (max-width: 60em) {
+@media (min-width: 45em) and (max-width: 68em) {
 
     .hero-strong {
         display: none;
@@ -833,13 +833,15 @@ section:nth-of-type(5) {
     }
 }
 
+@media (min-width: 69em) {
+    .hero-card {
+        width: 70%;
+    }
+}
+
 @media (min-width: 55em) {
 
-   .hero-card {
-        width: 60%
-    }
-
-    .hero-content {
+   .hero-content {
         width: 76%;
         margin-right: auto;
     }
