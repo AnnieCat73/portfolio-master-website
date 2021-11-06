@@ -375,19 +375,7 @@ select {
 /* Compontents         */
 /* ------------------- */
 
-.current {
-    cursor: pointer;
-    padding: .5rem 0;
-    border: 0;
-    border-bottom: .2rem solid var(--clr-light-100);
-    background-color: transparent;
 
-}
-
-.current:hover,
-.current:hover {
-    opacity: .5;
-}
 
 .large-button {/*can change this -can do display: inline-block but grid works here*/
     display: inline-grid; /*so it doesn't expand if only grid*/
@@ -398,21 +386,7 @@ select {
     text-decoration: none;
 }
 
-.underline-indicators > * {/*so these would be underline of a nav list with this class in the ul  PART 17*/
-    cursor: pointer;
-    padding: var(--underline-gap, 1rem) 0;
-    border: 0;
-    border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
-}
 
-.underline-indicators > *:hover,
-.underline-indicators > *:focus {
-    border-color: hsl( var(--clr-white) / .5);
-}
-
-.underline-indicators > .active{
-    border-color: hsl( var(--clr-white) / 1);
-}
 
 
 /* ----------------------------- */
@@ -462,7 +436,7 @@ section:nth-of-type(5) {
 }
 
 
-/********************/
+
 
 
 /*.flex {
@@ -568,8 +542,8 @@ section:nth-of-type(5) {
 }
 
 .close-nav:hover,
-.close-nave:focus {
-  color: var(--clr-dark-500);
+.close-nav:focus {
+  color: var(--clr-dark-300);
   font-weight: var(--fw-800);
 }
 
@@ -582,7 +556,7 @@ section:nth-of-type(5) {
 .nav-link-mobile:hover,
 .nav-link-mobile:focus {
   color: var(--clr-dark-300);
-  font-weight: var(--fw-700);
+  font-weight: var(--fw-800);
 }
 
 
@@ -614,9 +588,18 @@ section:nth-of-type(5) {
     font-weight: var(--fw-500);
 }
 
+.email-link:hover,
+.email-link:focus {
+    opacity: .5;
+}
+
 .social-list-link {
     color: var(--clr-light-100);
     font-size: var(--fs-500);
+}
+.social-list-link:hover,
+.social-list-link:focus {
+   opacity: .5;
 }
 
 
@@ -670,12 +653,17 @@ section:nth-of-type(5) {
     .nav-item {
         color: var(--clr-light-100);
         font-weight: var(--fw-500);
-        transition: font-weight ease-in-out 3s;
+        transition: font-weight ease-in-out .4s;
     }
 
     .nav-item:hover,
     .nav-item:focus {
         font-weight: var(--fw-700);
+        cursor: pointer;
+        border: 0;
+        border-bottom: .2rem solid var(--clr-light-100);
+        
+       
     }
 
     .nav-link {
@@ -1297,6 +1285,7 @@ textarea::placeholder {
 
 .main-screenshot {
     grid-area: main-screenshot;
+    box-shadow: var(--box-shadow);
 }
 
 .process {
@@ -1329,6 +1318,7 @@ textarea::placeholder {
 
 .outcome-screenshot {
     grid-area: outcome-screenshot;
+    box-shadow: var(--box-shadow);
 }
 
 .my-learning {
