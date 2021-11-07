@@ -165,15 +165,23 @@ a {
 }
 
 ul[class] {
-  list-style: none;
-  padding: 0;
+  list-style-type: none;
+  list-style-position: inside;
+  /*padding: 0;*/
   text-decoration: none;
+  text-indent: -1em;
+  padding-left: 1em;
 }
 
 ol[class] {
-    padding: 0;
+    list-style-position: inside;
+    font-weight: bold;
+    /*padding: 0;*/
     text-decoration: none; 
+    text-indent: -1em;
+    padding-left: 1em;
 }
+
 
 
 /* set up the body */
@@ -182,7 +190,6 @@ body {
     font-size: var(--fs-400);
     color: var(--clr-dark-300);
     padding-top: 7em; /*This is for HEADER fixed prevent content*/
-    background-color: ;
     line-height: 1.6;
     min-height: 100vh;
 }
@@ -658,10 +665,10 @@ section:nth-of-type(5) {
 
     .nav-item:hover,
     .nav-item:focus {
-        font-weight: var(--fw-700);
+        font-weight: var(--fw-600);
         cursor: pointer;
         border: 0;
-        border-bottom: .2rem solid var(--clr-light-100);
+        border-bottom: .15rem solid var(--clr-light-100);
         
        
     }
@@ -915,6 +922,11 @@ section:nth-of-type(5) {
     grid-area: skills-info;
 }
 
+
+
+.skills .skills-list {
+    list-style-type: disc;
+}
 .side-img {
     grid-area: side-img;
 }
@@ -923,9 +935,15 @@ section:nth-of-type(5) {
     grid-area: coursework;
 }
 
+.skills .course-list {
+    list-style-type: disc;
+}
+
 .currently {
     grid-area: currently;
 }
+
+
 
 
 
@@ -1308,6 +1326,11 @@ textarea::placeholder {
         ". my-process .";
     
 }
+
+.process .facts {
+    list-style-type: none;
+}
+
 
 .task {
     grid-area: task;
