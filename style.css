@@ -299,6 +299,7 @@ select {
     color: var(--clr-dark-200);
     font-size: var(--fs-900);
     font-weight: var(--fw-800);
+    margin-top: 1rem;
 }
 
 .main-sub-heading {
@@ -335,6 +336,14 @@ select {
 .ff-serif-mont { 
     font-family: var(--ff-serif-mont); 
 } 
+
+@media (min-width: 45em) {
+    .heading {
+        margin-top: 0;
+    }
+    
+}
+
 
 
 
@@ -958,6 +967,17 @@ figcaption {
     color: var(--clr-dark-200);
     font-weight: var(--fw-600);
 }
+
+.skills .section-title {
+    margin-top: 3rem;
+}
+
+@media (min-width: 45em) {
+    .skills .section-title {
+        margin-top: 0;
+    }
+}
+
 
 @media (min-width: 45em) and (max-width: 50em) {
 
