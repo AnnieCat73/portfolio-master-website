@@ -604,7 +604,7 @@ section:nth-of-type(5) {
 
 .social-list-link {
     color: var(--clr-light-100);
-    font-size: var(--fs-500);
+    font-size: var(--fs-400);
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -961,7 +961,7 @@ section:nth-of-type(5) {
    box-shadow: 2px 2px 5px var(--clr-accent-500);
 }
 
-figcaption {
+.img-text {
     font-size: var(--fs-200);
     font-style: italic;
     color: var(--clr-dark-200);
@@ -1011,7 +1011,7 @@ figcaption {
         display: grid;
     }
 
-    .side-img figcaption {
+    .side-img .img-text {
         align-self: start;
     }
 }
