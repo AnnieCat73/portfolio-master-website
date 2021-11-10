@@ -2,24 +2,14 @@
 /* Custom properties   */
 /* ------------------- */
 
-/*
-font-family: 'Bree Serif', serif;
-font-family: 'Merriweather', serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'PT Serif', serif;
---ff-sans-cond: "Barlow Condensed", sans-serif;
---ff-sans-normal: "Barlow", sans-serif;
-*/
-
 :root {
-    /* colors *//*can change this*/
+
+    /* colors */
     --clr-dark-100: #000000;
-    --clr-dark-200: #333333;/*Titles?*/
-    --clr-dark-300: #404040;/*body txt*/
+    --clr-dark-200: #333333;
+    --clr-dark-300: #404040;
     --clr-dark-400: #444444;
-    --clr-dark-500: #797777;/* or body txt*/
+    --clr-dark-500: #797777;
     --cld-dark-600: #5a5858c4;
 
     --clr-light-100: #ffffff;
@@ -32,29 +22,18 @@ font-family: 'PT Serif', serif;
     --clr-accent-600: #db5461;
     
     
-    /* font-sizes *//*Working from base 16px CAN CHANGE THESE VALUES*/
-    
-    --fs-900: clamp(2.5rem, 8vw + 1rem, 5.5rem);/*normally the H1 is difficult so best to do it
-    --fs-850: clamp(0.55rem, 1vw + 1rem, 2rem);*/
-
+    /* font-sizes, base is 16px*/
+    --fs-900: clamp(2.5rem, 8vw + 1rem, 5.5rem);
     --fs-800: clamp(2rem, 8vw + 1rem, 4rem);
-    
-
-    --fs-700: 1.6rem;/*and this*/
+    --fs-700: 1.6rem;
     --fs-600: 1.5rem;
-   
-    --fs-500: 1rem;/*and this*/
-    
-    --fs-400: 0.9375rem;/*ONLU DONE THIS ONE SO FARbase size as the body text*/
-   
-    
-
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
     --fs-200: 0.875rem;
     
-    /* font-families *//*can change this*/
+    /* font-family */
     --ff-serif-mont: "Montserrat", sans-serif;
     
-
     /*font-weights*/
     --fw-400: 400;
     --fw-500: 500;
@@ -62,42 +41,25 @@ font-family: 'PT Serif', serif;
     --fw-700: 700;
     --fw-800: 800;
 
-    /*border-radius*/
-    --br-100: 1rem;
-
-    /****/
-    /*--box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);*/
+   /*box-shadow*/
+    --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
     --box-shadow-200: 0 2.4rem 4.8rem rgba(5, 2, 2, 0.15);
     --box-shadow-300: 0 1px 2px rgba(0, 0, 0, 0.1);
     --box-shadow-400: 0 0 0 0.15rem #3dc37a;
     --box-shadow-500: 10px 10px 5px #ccc;
-    
-    --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
-    /*****/
 }
 
-@media (min-width: 35em) {/*Only redifine  font-sizes that need changing in  diff screen sizes*/ 
-    :root { /*If work in Figma can check what they change to*/
-        /*--fs-800: 5rem;*/
-        
-        
-        
+@media (min-width: 35em) {
+
+    :root { 
         --fs-700: 2rem;
         --fs-400: 1rem;
     }
 }
 
 @media (min-width: 45em) {
+
     :root {
-        /* font-sizes */
-        /*--fs-800: 6.25rem;*/
-       
-
-       
-       
-
-
-        /*--fs-400: 1.125rem;*/
         --fs-400: 1.06rem;
         --fs-500: 1.313rem;
         --fs-600: 1.8rem;
@@ -109,7 +71,6 @@ font-family: 'PT Serif', serif;
 /* ------------------- */
 /* Reset               */
 /* ------------------- */
-
 
 
 /* Box sizing */
@@ -169,7 +130,6 @@ ul[class] {
   list-style-position: inside;
   padding: 0;
   text-decoration: none;
-  
 }
 
 
@@ -178,7 +138,7 @@ body {
     font-family: var(--ff-serif-mont);
     font-size: var(--fs-400);
     color: var(--clr-dark-300);
-    padding-top: 7em; /*This is for HEADER fixed prevent content*/
+    padding-top: 7em; 
     line-height: 1.6;
     min-height: 100vh;
 }
@@ -186,7 +146,7 @@ body {
 
 @media (min-width: 60em) {
     body {
-        padding-top: 8em; /*This is for HEADER fixed prevent content*/
+        padding-top: 8em; 
     }
 }
 
@@ -195,7 +155,6 @@ img,
 svg {
     max-width: 100%;
     display: block;
-    
 }
 
 /* make form elements easier to work with */
@@ -223,11 +182,8 @@ select {
 /* Utility classes     */
 /* ------------------- */
 
-
-
-.flow > *:not(:first-child) {/* or last child- see notes if use it*/
+.flow > *:not(:first-child) {
     margin-top: 1rem;
-    
 }
 
 .space-large > * {
@@ -242,31 +198,22 @@ select {
     margin-top: 2.8rem;
 }
 
+.space-xls > *:not(:first-child) {
+    margin-top: 2.8rem;
+}
 
 .space-more > * {
     margin-top: 4rem;
-}
-
-.space-xls > *:not(:first-child) {
-    margin-top: 2.8rem;
 }
 
 .space-small > * {
     margin-top: 1rem;
 }
 
-/*.flow > *:where(:not(:first-child)) {/* or last child- see notes if use it
-    margin-top: var(--flow-space, 1rem);
-    
-}*/
-
-
 .btn {
-    /*or display: inline-grid; /*so it doesn't expand if only grid*/
   color: var(--clr-light-100);
   box-shadow: var(--box-shadow);
   display: inline-block;
-  /*may not need font-size:; same as body text*/
   border: 0;
   border-radius: .5em;
   font-weight: var(--fw-700);
@@ -274,8 +221,7 @@ select {
   text-transform: uppercase;
   text-decoration: none;
   padding: .8em 1em;
-  background-color: var(--clr-accent-100);/*if only use green then put it in here*/
-  
+  background-color: var(--clr-accent-100);
 }
 
 .btn:hover,
@@ -341,50 +287,25 @@ select {
     .heading {
         margin-top: 0;
     }
-    
 }
-
-
-
-
-/* ------------------- */
-/* Components         */
-/* ------------------- */
-
-
-
-.large-button {/*can change this -can do display: inline-block but grid works here*/
-    display: inline-grid; /*so it doesn't expand if only grid*/
-    place-items: center;
-    padding: 0 2em;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    text-decoration: none;
-}
-
-
 
 
 /* ----------------------------- */
 /* Layout                        */
 /* ----------------------------- */
 
-.main-grid {/* FOR MOBILE GRID MAIN CONTAINER*/
-    
+.main-grid {
     display: grid;
     grid-template-columns: minmax(1.5rem, 1fr) minmax(0px, 35rem) minmax(1.5rem, 1fr);
-    
-    /*padding-inline: 1rem;
-    /*place-items: center; /*centers everything on the page. Cld use place-content: center; but wld need row-gap: 10% f.ex  then*/
-    /*grid-template-columns: minmax(2rem, 1fr) minmax(0, 35em) minmax (2rem, 1fr);*/
-    /*padding-inline: 1rem; /*if still need spacing to right and left*/
 }
 
 .main-grid > * {
     grid-column: 2;
 }
 
-
+.flex {
+    display: flex;
+}
 
 section:nth-of-type(1) {
     padding-top: 4rem;
@@ -392,24 +313,22 @@ section:nth-of-type(1) {
 }
 
 section:nth-of-type(2) {
-    
     padding-bottom: 1rem;
 }
+
 section:nth-of-type(3) {
     padding-bottom: 1rem;
 }
+
 section:nth-of-type(4) {
     padding-bottom: 1rem;
 }
 
 section:nth-of-type(5) {
     padding-bottom: 3rem;
-
-    
 }
 
 
-  
 @media (min-width: 35em) {
 
     section:nth-of-type(1) {
@@ -418,80 +337,38 @@ section:nth-of-type(5) {
     }
 
     section:nth-of-type(3) {
-        
-       padding-bottom: 2rem;
-        
-    }
-
-    section:nth-of-type(4) {
-        
         padding-bottom: 2rem;
     }
-    
-}
 
-@media (min-width: 45em) {
-
-    
-    
-    section:nth-of-type(2) {
-        
-        padding-bottom: 4rem;
-    }
-    section:nth-of-type(3) {
-        padding-bottom: 4rem;
-    }
     section:nth-of-type(4) {
-        padding-bottom: 4rem;
-    }
-    
-    section:nth-of-type(5) {
-        padding-bottom: 4rem;
-    
-        
+        padding-bottom: 2rem;
     }
 }
-
-
-.flex {
-    display: flex;
-    
-}
-
-
 
 
 @media (min-width: 45em) {
     .main-grid {
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0px, 40rem)) minmax(2rem, 1fr);
-        /*column-gap: var(--container-gap, 2rem);/*Gap btwn the 2 columns*/
-        /*grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);*/
     } 
-
-    
 }
 
-/*********************************************/
-
-/* -------
------------- */
-/* Section specific      */
+/* ------------------- */
+/* Section specific    */
 /* ------------------- */
 
 /*Header */
+
 .primary-header {
-    display: flex;/*FLEX with spacbtw*/
+    display: flex;
     justify-content: space-between;
     height: 100px;
-    padding-top: 1.5em;
+    padding-top: 1.5rem;
     padding-inline: 1.5rem;
     position: fixed;
     top: 0;
     background-color: var(--clr-accent-500);
     width: 100%;
-    
 }
-
 
 .open-nav {
     border: 0;
@@ -526,7 +403,6 @@ section:nth-of-type(5) {
     transform: translateX(0);
     transition: transform 250s;
     height: 100%;
-    
 }
 
 .menu-list-mobile {
@@ -538,7 +414,8 @@ section:nth-of-type(5) {
     justify-content: space-around;
 }
 
-.navigation-open {/*added for JS*/
+/*added for JS*/
+.navigation-open {
     transform: translateX(100%);
 }
 
@@ -570,7 +447,6 @@ section:nth-of-type(5) {
   color: var(--clr-dark-300);
   font-weight: var(--fw-800);
 }
-
 
 .name {
     color: var(--clr-light-100);
@@ -606,12 +482,22 @@ section:nth-of-type(5) {
     color: var(--clr-light-100);
     font-size: var(--fs-400);
 }
+
 .social-list-link:hover,
 .social-list-link:focus {
    opacity: .5;
 }
 
+@media (min-width: 10em) and (max-width: 23em) {
 
+    .contact-me {
+        gap: .4em;
+    }
+    
+    .social-list {
+        gap: .3em;
+    }
+}
 
 @media (min-width: 45em) {
 
@@ -629,11 +515,9 @@ section:nth-of-type(5) {
     }
 
     .social-list {
-        gap: 1em;
         margin: 0;
     }
 
-    
     .open-nav,
     .close-nav {
         display: none;
@@ -645,13 +529,11 @@ section:nth-of-type(5) {
 
     .menu-nav  {
         display: block;
-        
     }
 
     .menu-list {
         gap: 1em;
         margin: 0;
-       
     }
 
     .nav-item {
@@ -666,14 +548,11 @@ section:nth-of-type(5) {
         cursor: pointer;
         border: 0;
         border-bottom: .15rem solid var(--clr-light-100);
-        
-       
     }
 
     .nav-link {
         color: var(--clr-light-100);
     }
-
 }
 
 @media (min-width: 60em) {
@@ -681,14 +560,10 @@ section:nth-of-type(5) {
     .menu-nav {
         align-self: center;
     }
-
 }
 
 
-
 /*Hero*/
-
-
 
 .hero {
     grid-template-areas: 
@@ -706,7 +581,6 @@ section:nth-of-type(5) {
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-    
 }
 
 
@@ -771,7 +645,6 @@ section:nth-of-type(5) {
 .social-list-hero {
     gap: 1em;
     align-items: center;
-   
 }
 
 .social-link-card {
@@ -780,13 +653,10 @@ section:nth-of-type(5) {
     z-index: -1;
 }
 
-
-
 .social-link-card:hover,
 .social-link-card:focus {
     opacity: .5;
     cursor: pointer;
-    
 }
 
 .hero-content {
@@ -796,7 +666,6 @@ section:nth-of-type(5) {
     align-items: flex-start;
     gap: 1em;
 }
-
 
 .home-btns a {
     margin-right: .8em;
@@ -809,7 +678,6 @@ section:nth-of-type(5) {
         width: 100%;
     }
 }
-
 
 @media (min-width: 45em) {
     
@@ -832,7 +700,6 @@ section:nth-of-type(5) {
     .mobile-img {
         display: none;
     }
-
 }
 
 @media (min-width: 45em) and (max-width: 68em) {
@@ -860,8 +727,6 @@ section:nth-of-type(5) {
     }
 }
 
-
-
 /*About*/
 
 .about {
@@ -879,8 +744,6 @@ section:nth-of-type(5) {
     grid-area: about-title;
 }
 
-
-
 .about-text {
     grid-area: about-text;
 }
@@ -888,7 +751,7 @@ section:nth-of-type(5) {
 
 
 @media (min-width: 45em) {
-
+    
     .about {
         
         grid-template-areas:
@@ -913,14 +776,12 @@ section:nth-of-type(5) {
     grid-area: skills-info;
 }
 
-
-
 .skills .skills-list {
     list-style-type: disc;
     text-indent: -1em;
     padding-left: 1em;
-    
 }
+
 .side-img {
     grid-area: side-img;
 }
@@ -938,7 +799,6 @@ section:nth-of-type(5) {
 .currently {
     grid-area: currently;
 }
-
 
 .section-title-skills {
     color: var(--clr-accent-500);
@@ -1052,12 +912,10 @@ section:nth-of-type(5) {
     box-shadow: var(--box-shadow);
 }
 
-
 .project-details {
     display: grid;
     place-items: center;
     line-height: 1.8;
-    
 }
 
 .project-details p {
@@ -1076,21 +934,21 @@ section:nth-of-type(5) {
         row-gap: 0em;
     }
     
-
     .project {
         grid-column: 2 /4;
         display: grid;
         grid-template-columns: 45% 50%;
-        
         align-items: center;
     }
 
     .project:nth-of-type(1) {
         margin-bottom: 3rem;
     }
+
     .project:nth-of-type(2) {
         margin-bottom: 3rem;
     }
+
     .project:nth-of-type(3) {
         margin-bottom: 3rem;
     }
@@ -1155,7 +1013,6 @@ section:nth-of-type(5) {
     border-color: var(--clr-dark-500);
     outline: none;
 }
-
 
 .contact input::placeholder,
 textarea::placeholder {
@@ -1226,10 +1083,8 @@ textarea::placeholder {
         ". footer .";
 }
 
-
-
 .primary-footer {
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
 }
 
 .footer-content {
@@ -1259,15 +1114,12 @@ textarea::placeholder {
 }
 
 
-
 /* ------------------- */
 /* Page specific       */
 /* ------------------- */
 
 
-/*dev-camp-learning*/
-/*github-repo-gallery*/
-
+/*dev-camp-learning/github-repo-gallery*/
 
 .projects-title {
     color: var(--clr-dark-100);
@@ -1279,7 +1131,6 @@ textarea::placeholder {
 .project-sub-heading {
     color: var(--clr-accent-500);
     font-weight: var(--fw-400);
-    
 }
 
 .sub-heading-2 {
@@ -1313,7 +1164,6 @@ textarea::placeholder {
     grid-template-areas: 
         ". task ."
         ". my-process .";
-    
 }
 
 .outcome .my-learning,
@@ -1379,7 +1229,6 @@ textarea::placeholder {
             ". my-learning my-learning ."
             ". invite invite .";
     }
-    
 }
 
 

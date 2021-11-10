@@ -11,6 +11,7 @@ const skillsLink = document.querySelector("#js-skills");
 const projectsLink = document.querySelector("#js-projects");
 const contactLink = document.querySelector("#js-contact");
 
+
 //Open the menu
 
 openBtn.addEventListener("click", () => {
