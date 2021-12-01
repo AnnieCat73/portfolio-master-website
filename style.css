@@ -239,7 +239,7 @@ background-color: var(--clr-accent-100);
   font-weight: var(--fw-600);
   background-color: var(--clr-light-100);
   border: 2px solid  var(--clr-accent-100);
-  transition: background-color .4s ease 0s;
+  transition: background-color .4s ease-in-out 0s;
 }
 
 .center {
@@ -341,12 +341,12 @@ section:nth-of-type(5) {
 @media (min-width: 35em) {
 
   section:nth-of-type(1) {
-      padding-top: 4rem;
-      padding-bottom: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
   }
 
   section:nth-of-type(3) {
-      padding-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   section:nth-of-type(4) {
@@ -357,7 +357,7 @@ section:nth-of-type(5) {
 
 @media (min-width: 45em) {
   .main-grid {
-      grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0px, 40rem)) minmax(2rem, 1fr);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0px, 40rem)) minmax(2rem, 1fr);
   } 
 }
 
@@ -501,23 +501,23 @@ font-weight: var(--fw-800);
 @media (min-width: 10em) and (max-width: 23em) {
 
   .contact-me {
-      gap: .4em;
+    gap: .4em;
   }
   
   .social-list {
-      gap: .3em;
+    gap: .3em;
   }
 }
 
 @media (min-width: 45em) {
 
   .primary-header {
-      height: 110px;
-      padding-inline: clamp(2rem, 4vw, 20rem);
+    height: 110px;
+    padding-inline: clamp(2rem, 4vw, 20rem);
   }
 
   .my-details {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .contact-me {
@@ -525,50 +525,51 @@ font-weight: var(--fw-800);
   }
 
   .social-list {
-      margin: 0;
+    margin: 0;
   }
 
   .open-nav,
   .close-nav {
-      display: none;
+    display: none;
   }
 
   .menu-nav-mobile {
-      display: none;
+    display: none;
   }
 
   .menu-nav  {
-      display: block;
+    display: block;
   }
 
   .menu-list {
-      gap: 1em;
-      margin: 0;
+    gap: 1em;
+    margin: 0;
   }
 
   .nav-item {
-      color: var(--clr-light-100);
-      font-weight: var(--fw-500);
-      transition: font-weight ease-in-out .4s;
-  }
-
-  .nav-item:hover,
-  .nav-item:focus {
-      font-weight: var(--fw-600);
-      cursor: pointer;
-      border: 0;
-      border-bottom: .15rem solid var(--clr-light-100);
+    color: var(--clr-light-100);
+    
   }
 
   .nav-link {
-      color: var(--clr-light-100);
+    color: var(--clr-light-100);
+    font-weight: var(--fw-500);
+    transition: font-weight ease-in-out .4s;
   }
+  .nav-link:hover,
+  .nav-link:focus {
+    font-weight: var(--fw-600);
+    cursor: pointer;
+    border: 0;
+    border-bottom: .15rem solid var(--clr-light-100);
+  }
+  
 }
 
 @media (min-width: 60em) {
 
   .menu-nav {
-      align-self: center;
+    align-self: center;
   }
 }
 
