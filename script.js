@@ -1,4 +1,4 @@
-//Menu on Mobile up to min width: 45em
+//Menu on Mobile 
 
 //Get Elements
 
