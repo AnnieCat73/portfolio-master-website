@@ -15,7 +15,7 @@
   --clr-light-100: #ffffff;
   
   --clr-accent-100: #61c9a8;
-  --clr-accent-150: #3ba181;
+  --clr-accent-150: #2C775E;
   --clr-accent-200: #66baa8;
   --clr-accent-300: #00c9bf;
   --clr-accent-400: #d65db1;
@@ -220,7 +220,7 @@ line-height: 1.125;
 text-transform: uppercase;
 text-decoration: none;
 padding: .8em 1em;
-background-color: var(--clr-accent-100);
+background-color: var(--clr-accent-150);
 }
 
 .btn:hover,
