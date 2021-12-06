@@ -135,7 +135,7 @@ text-decoration: none;
 body {
   font-family: var(--ff-serif-mont);
   font-size: var(--fs-400);
-  color: var(--clr-dark-300);
+  color: var(--clr-dark-100);/*var(--clr-dark-300);*/
   padding-top: 7em; 
   line-height: 1.6;
   min-height: 100vh;
@@ -812,7 +812,7 @@ font-weight: var(--fw-800);
 }
 
 .sub-heading-skills {
-  color: var(--clr-dark-500);
+  color: var(--clr-dark-300);/*500*/
   font-size: var(--fs-400);
   font-style: italic;
   font-weight: var(--fw-500);
