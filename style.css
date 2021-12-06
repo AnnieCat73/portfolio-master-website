@@ -138,7 +138,7 @@ text-decoration: none;
 body {
   font-family: var(--ff-serif-mont);
   font-size: var(--fs-400);
-  color: var(--clr-dark-100);/*var(--clr-dark-300);*/
+  color: var(--clr-dark-100);
   padding-top: 7em; 
   line-height: 1.6;
   min-height: 100vh;
@@ -740,9 +740,9 @@ font-weight: var(--fw-800);
 
 .about {
   grid-template-areas: 
-      ". about-heading ."
-      ". about-title ."
-      " . about-text .";
+    ". about-heading ."
+    ". about-title ."
+    " . about-text .";
 }
 
 .about:nth-child(1) {
