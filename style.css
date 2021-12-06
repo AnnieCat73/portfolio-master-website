@@ -15,6 +15,7 @@
   --clr-light-100: #ffffff;
   
   --clr-accent-100: #61c9a8;
+  --clr-accent-140: #3b9679;
   --clr-accent-150: #2C775E;
   --clr-accent-200: #66baa8;
   --clr-accent-300: #00c9bf;
@@ -586,7 +587,7 @@ font-weight: var(--fw-800);
 
 .main-hero-card {
  justify-self: end;
-  background: var(--clr-accent-100);
+  background: var(--clr-accent-140);
   width: 100%;
   flex-grow: 1;
   flex-direction: column;
