@@ -15,6 +15,7 @@
   --clr-light-100: #ffffff;
   
   --clr-accent-100: #61c9a8;
+  --clr-accent-150: #3ba181;
   --clr-accent-200: #66baa8;
   --clr-accent-300: #00c9bf;
   --clr-accent-400: #d65db1;
@@ -670,6 +671,7 @@ font-weight: var(--fw-800);
   margin-bottom: 1em;
   font-weight: var(--fw-800);
   font-size: var(--fs-400);
+  background-color: var(--clr-accent-150);
 }
 
 @media (min-width: 15em) and (max-width: 27em) {
