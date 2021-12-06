@@ -395,7 +395,7 @@ section:nth-of-type(5) {
 
 .menu-nav-mobile {
   position: fixed;
-  background: var(--clr-accent-100);
+  background: var(--clr-accent-140);
   width: 100%;
   top: 0;
   right: 0;
@@ -440,7 +440,7 @@ font-weight: var(--fw-800);
 .nav-link-mobile {
   color: var(--clr-dark-100);
   font-size: var(--fs-600);
-  font-weight: var(--fw-700);
+  font-weight: var(--fw-800);
 }
 
 .nav-link-mobile:hover,
