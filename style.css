@@ -1110,7 +1110,7 @@ textarea::placeholder {
 }
 
 .footer-text span{
-  color: var(--clr-accent-600);
+  color: var(--clr-accent-550);
   font-weight: var(--fw-700);
   font-style: normal;
 }
@@ -1139,7 +1139,7 @@ textarea::placeholder {
 }
 
 .project-sub-heading {
-  color: var(--clr-accent-550);
+  color: var(--clr-accent-500);
   font-weight: var(--fw-400);
 }
 
