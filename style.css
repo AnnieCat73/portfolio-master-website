@@ -222,7 +222,7 @@ select {
   text-transform: uppercase;
   text-decoration: none;
   padding: .8em 1em;
-  background-color: var(--clr-accent-150);
+  background-color: var(--clr-accent-140);
 }
 
 .btn:hover,
