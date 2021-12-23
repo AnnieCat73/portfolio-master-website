@@ -212,7 +212,7 @@ select {
 }
 
 .btn {
-  color: var(--clr-light-100);
+  color: #76323f;/*var(--clr-light-100);*/
   box-shadow: var(--box-shadow);
   display: inline-block;
   border: 0;
@@ -222,7 +222,7 @@ select {
   text-transform: uppercase;
   text-decoration: none;
   padding: .8em 1em;
-  background-color: var(--clr-accent-150);
+  background-color: #d7cec7;/*var(--clr-accent-150);*/
 }
 
 .btn:hover,
@@ -366,7 +366,7 @@ section:nth-of-type(5) {
   padding-inline: 1.5rem;
   position: fixed;
   top: 0;
-  background-color: var(--clr-accent-500);
+  background-color: #76323f;/*var(--clr-accent-500);*/
   width: 100%;
   z-index: 10;
 }
@@ -587,7 +587,7 @@ font-weight: var(--fw-800);
 
 .main-hero-card {
  justify-self: end;
-  background: var(--clr-accent-140);
+  background: #d7cec7;/*var(--clr-accent-140);*/
   width: 100%;
   flex-grow: 1;
   flex-direction: column;
@@ -671,7 +671,8 @@ font-weight: var(--fw-800);
 .home-btns a {
   margin-right: .8em;
   margin-bottom: 1em;
-  background-color: var(--clr-accent-150);
+  background-color: #d7cdc7;/*var(--clr-accent-150);*/
+  color: #76323f;
 }
 
 @media (min-width: 15em) and (max-width: 27em) {
