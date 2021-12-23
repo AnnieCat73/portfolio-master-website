@@ -19,6 +19,7 @@
   --clr-accent-150: #2C775E;
   --clr-accent-200: #66baa8;
   --clr-accent-300: #00c9bf;
+  --clr-accent-350: #76323f;
   --clr-accent-400: #d65db1;
   --clr-accent-500: #bc4F7e;
   --clr-accent-550: #D53949;
@@ -227,10 +228,10 @@ select {
 
 .btn:hover,
 .btn:focus {
-  color: var(--clr-dark-100);
+  color: var(--clr-accent-350);
   font-weight: var(--fw-600);
   background-color: var(--clr-light-100);
-  border: 2px solid  var(--clr-accent-100);
+  border: 2px solid  var(--clr-accent-350);
   transition: background-color .4s ease-in-out 0s;
 }
 
@@ -366,7 +367,7 @@ section:nth-of-type(5) {
   padding-inline: 1.5rem;
   position: fixed;
   top: 0;
-  background-color: #76323f;/*var(--clr-accent-500);*/
+  background-color: var(--clr-accent-350);
   width: 100%;
   z-index: 10;
 }
@@ -811,7 +812,7 @@ font-weight: var(--fw-800);
 }
 
 .section-title-skills {
-  color: var(--clr-accent-500);
+  color: var(--clr-accent-350);
   font-size: var(--fs-500);
   font-weight: var(--fw-500);
 }
@@ -828,7 +829,7 @@ font-weight: var(--fw-800);
 }
 
 .cat-img {
- box-shadow: 2px 2px 5px var(--clr-accent-500);
+ box-shadow: 2px 2px 5px var(--clr-accent-350);
 }
 
 .img-text {
@@ -1037,7 +1038,7 @@ textarea::placeholder {
 
 .contact button {
   display: inline-block;
-  background-color: var(--clr-accent-150);
+  background-color: var(--clr-accent-350);
   border: 0;
   border-radius: .5em;
   box-shadow: var(--box-shadow);
@@ -1052,8 +1053,9 @@ textarea::placeholder {
 
 .contact button:hover,
 .contact button:focus {
-  background-color: var(--clr-accent-500);
-  color: var(--clr-light-100);
+  background-color: var(--clr-light-100);
+  color: var(--clr-accent-350);
+  border: 2px solid var(--clr-accent-350);
   font-weight: var(--fw-800);
 }
 
@@ -1112,7 +1114,7 @@ textarea::placeholder {
 }
 
 .footer-text span{
-  color: var(--clr-accent-550);
+  color: var(--clr-accent-350);
   font-weight: var(--fw-700);
   font-style: normal;
 }
@@ -1141,7 +1143,7 @@ textarea::placeholder {
 }
 
 .project-sub-heading {
-  color: var(--clr-accent-500);
+  color: var(--clr-accent-350);
   font-weight: var(--fw-400);
 }
 
