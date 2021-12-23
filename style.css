@@ -261,7 +261,7 @@ select {
 }
 
 .section-title {
-  color: var(--clr-accent-500);
+  color: #76323f;/*var(--clr-accent-500);*/
   text-transform: uppercase;
   font-size: var(--fs-500);
   font-weight: var(--fw-500);
