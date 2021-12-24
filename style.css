@@ -388,7 +388,8 @@ section:nth-of-type(5) {
 
 .open-nav:hover,
 .open-nav:focus {
-  transform: rotate(50deg);
+  /*transform: rotate(50deg);*/
+  opacity: .5;
 }
 
 .menu-nav {
