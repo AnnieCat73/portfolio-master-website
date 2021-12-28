@@ -25,7 +25,7 @@ Users should be able to:
 ### Screenshot
 
 
-![](./images/github-screenshot.png)
+![](./images/readme.screenshot-github.png)
 ### Links
 
 - Live Site URL: https://www.annie-indreiten.com/
