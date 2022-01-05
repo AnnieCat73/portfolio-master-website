@@ -518,16 +518,10 @@ section:nth-of-type(5) {
     margin: 0;
   }
 
-  /*.open-nav,
-  .close-nav {
-    display: none;
-  }
-  /***/
   .open-nav,
   .menu-nav-mobile {
     display: none;
   }
-  /*///*/
   
   .menu-nav  {
     display: block;
