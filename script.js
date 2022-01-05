@@ -1,28 +1,24 @@
-//Menu on Mobile 
+//Menu on mobile
 
-//Get Elements
-
+//Get elements
+const closeBtn = document.querySelector(".close-nav");
 const openBtn = document.querySelector(".open-nav");
 const navMenu = document.querySelector(".menu-nav-mobile");
-const closeBtn = document.querySelector(".close-nav");
 
-const aboutLink = document.querySelector("#js-about");
-const skillsLink = document.querySelector("#js-skills");
-const projectsLink = document.querySelector("#js-projects");
-const contactLink = document.querySelector("#js-contact");
-
-
-//Open the menu
+//Attach eventlisteners and toggle navigation-open class
+closeBtn.addEventListener("click", () => {
+  navMenu.classList.remove("navigation-open");
+});
 
 openBtn.addEventListener("click", () => {
   navMenu.classList.add("navigation-open");
 });
 
-//Close the menu
-closeBtn.addEventListener("click", () => {
-  navMenu.classList.remove("navigation-open");
-});
-
+//Get to sections from mobile menu
+const aboutLink = document.querySelector("#js-about");
+const skillsLink = document.querySelector("#js-skills");
+const projectsLink = document.querySelector("#js-projects");
+const contactLink = document.querySelector("#js-contact");
 
 //Get to about section
 aboutLink.addEventListener("click", () => {
