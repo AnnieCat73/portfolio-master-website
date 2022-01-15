@@ -775,6 +775,7 @@ section:nth-of-type(5) {
     ". skills-info ."
     ". coursework ."
     ". currently .";
+  /*padding-top: 5.4rem;*/
 }
 
 .skills-info {
@@ -845,6 +846,10 @@ section:nth-of-type(5) {
 
 
 @media (min-width: 45em) and (max-width: 50em) {
+  
+  .skills {
+    padding-top: 6rem;
+  }
 
   .section-title-skills {
     font-size: var(--fs-400);
@@ -861,6 +866,7 @@ section:nth-of-type(5) {
       ". skills-info side-img ."
       ". coursework currently .";
     row-gap: 3em;
+    padding-top: 6rem;
   }
 
   .currently {
@@ -891,6 +897,7 @@ section:nth-of-type(5) {
     ". project-3 ."
     ". project-4 .";
   row-gap: 1em;
+  padding-top: 1rem;
 }
 
 .projects:first-child {
@@ -937,6 +944,7 @@ section:nth-of-type(5) {
       ". project-3 project-3 ."
       ". project-4 project-4 .";
     row-gap: 0em;
+    padding-top: 5rem;
   }
   
   .project {
@@ -976,6 +984,7 @@ section:nth-of-type(5) {
   grid-template-areas: 
     ". form-heading ."
     ". form-container .";
+  padding-top: 5.5rem;
 }
 
 .form-heading {
@@ -1054,6 +1063,7 @@ textarea::placeholder {
 }
 
 @media (min-width: 35em) {
+
   .contact form {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr min-content;
