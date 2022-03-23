@@ -13,19 +13,20 @@
 ## Overview
 
 This is my web development portfolio website.
+
 ### The challenge
 
 Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size.
 - See hover states for all interactive elements on the page.
--Navigate between sections and/or pages.
+  -Navigate between sections and/or pages.
 - Send email via the form in the contact section.
 
 ### Screenshot
 
+![](./images/github-screenshot-update.png)
 
-![](./images/readme-screenshot-github.png)
 ### Links
 
 - Live Site URL: https://www.annie-indreiten.com/
@@ -58,14 +59,10 @@ This was another great practice in doing a project from scratch. I designed and 
 
 I will continue to update the site as needed. I will add any new information about myself and any 'new" work or projects when this is available.
 
+I have added HTML emails to my projects as of March 2022
+
 ## Author
 
 - Website - https://www.annie-indreiten.com/
 - Github – https://github.com/AnnieCat73
 - LinkedIn - https://www.linkedin.com/in/annieindreitendeveloper/
-
-
-
-
-
-
